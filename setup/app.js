@@ -1,23 +1,26 @@
-let  value= 0;
+let  count= 0;
 
 const values=document.querySelector("#value")
-const btns=document.querySelector('.btn');
+const btns=document.querySelectorAll(".btn");
 
 
 btns.forEach(function(btn) {
     btn.addEventListener("click",function(e){
-        const stsyless=e.currentTarget.classList;
-        if(stsyless.contains('decrease')){
-            value--;
+        const styles=e.currentTarget.classList;
+        if(styles.contains("decrease")){
+            count--;
         }
-        else if(stsyless.contains('reset')){
-            value =0;
-        } else if(stsyless.contains('reset')){
-            value ++;
+        else if(styles.contains("reset")){
+            count =0;
+        } else if (styles.contains("increase")){
+            count ++;
         
         }
-       values.textContent = value;
-    
+        
+       values.textContent = count;
+       if(count>0){
+        values.styles.color="green";
+    }
     
     });
     
