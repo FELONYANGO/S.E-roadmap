@@ -10,17 +10,25 @@ btns.forEach(function(btn) {
         if(styles.contains("decrease")){
             count--;
         }
-        else if(styles.contains("reset")){
-            count =0;
-        } else if (styles.contains("increase")){
+        else if(styles.contains("increase")){
             count ++;
+        } else {
+            count = 0;
         
+        } 
+        
+        if ( count > 0 ){
+            values.style.color= "green";
+        }
+        if ( count < 0 ){
+            values.style.color= "red";
+        }
+        if ( count === 0 ){
+            values.style.color= "black";
         }
         
        values.textContent = count;
-       if(count>0){
-        values.styles.color="green";
-    }
+   
     
     });
     
