@@ -54,4 +54,4 @@ const  randombtn = document.querySelector(".random-btn")
 let startingItem = 0;
 
 //load innitial item
-
+nnsnwnd ksn qlnsw
